@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Form from "./components/Form";
+import Header from "./components/Header";
+import ShoppingList from "./components/ShoppingList";
 
 import "./App.css";
 
@@ -8,10 +10,15 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
       <Form
         shoppingList={shoppingList}
         setShoppingList={setShoppingList}
-      ></Form>
+      />
+      <ShoppingList
+        shoppingList={shoppingList}
+        setShoppingList={setShoppingList}
+      />
     </div>
   );
 }
